@@ -17,4 +17,4 @@ spec:
           effect: NoSchedule
       containers:
         - name: kube-stresscheck
-          image: quay.io/giantswarm/kube-stresscheck:latest
+          image: systemdevformations/kube-stresscheck

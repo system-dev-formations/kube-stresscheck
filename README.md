@@ -11,7 +11,7 @@ For details what `stress` does under the hood see [manual](https://linux.die.net
 ## Quick start
 
 ```
-kubectl apply -f https://raw.githubusercontent.com/giantswarm/kube-stresscheck/master/examples/node.yaml
+kubectl apply -f https://raw.githubusercontent.com/system-dev-formations/kube-stresscheck/master/examples/node.yaml
 ```
 
 Wait at least 30 seconds and check for `CrashLooping` pods and `NotReady` nodes.
@@ -22,7 +22,7 @@ kubectl get nodes
 ```
 
 ```
-kubectl delete -f https://raw.githubusercontent.com/giantswarm/kube-stresscheck/master/examples/node.yaml
+kubectl delete -f https://raw.githubusercontent.com/system-dev-formations/kube-stresscheck/master/examples/node.yaml
 ```
 
 Usually pods like `kube-proxy`, `nginx-ingress-controller`, `calico-node` are crashlooping. If kubelet or docker was affected by stress test then node will become `NotReady`.
@@ -32,12 +32,12 @@ Usually pods like `kube-proxy`, `nginx-ingress-controller`, `calico-node` are cr
 If you're really brave, then you can start stress check on the whole cluster (including a master node).
 
 ```
-kubectl apply -f https://raw.githubusercontent.com/giantswarm/kube-stresscheck/master/examples/cluster.yaml
+kubectl apply -f https://raw.githubusercontent.com/system-dev-formations/kube-stresscheck/master/examples/cluster.yaml
 ```
 
 Most probably you have just KILLED your cluster. It will probably require manual intervention after this command.
 
 If cluster is still ok, then remove stress check.
 ```
-kubectl delete -f https://raw.githubusercontent.com/giantswarm/kube-stresscheck/master/examples/node.yaml
+kubectl delete -f https://raw.githubusercontent.com/system-dev-formations/kube-stresscheck/master/examples/node.yaml
 ```
